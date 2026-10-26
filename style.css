@@ -1,0 +1,448 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 42px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+.demo {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+
+.bar {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* WhatsApp-style navbar */
+.whatsapp {
+  height: 42px;
+  background: #17191a;
+  color: #f4f4f4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  font-size: 11px;
+}
+
+.wa-avatar {
+  flex: 0 0 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #3d1727;
+  color: #ff315e;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+
+.wa-details {
+  min-width: 0;
+  flex: 1;
+  line-height: 1.35;
+}
+
+.wa-title {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.wa-subtitle {
+  color: #a8abad;
+  font-size: 9px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wa-action {
+  border: 1px solid #303435;
+  border-radius: 18px;
+  padding: 7px 11px;
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+.wa-icon {
+  font-size: 17px;
+  padding: 0 4px;
+}
+
+.wa-divider {
+  height: 22px;
+  width: 1px;
+  background: #303435;
+}
+
+/* LinkedIn-style navbar */
+.linkedin {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 5%;
+  border-bottom: 3px solid #f0f0f0;
+  color: #555;
+}
+
+.in-logo {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  background: #0a66c2;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 19px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 28px;
+  width: 175px;
+  border: 1px solid #d4d4d4;
+  border-radius: 18px;
+  padding: 0 10px;
+  color: #777;
+  font-size: 10px;
+}
+
+.li-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: clamp(10px, 2.3vw, 28px);
+}
+
+.li-item {
+  position: relative;
+  min-width: 38px;
+  text-align: center;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.li-icon {
+  display: block;
+  font-size: 16px;
+  line-height: 19px;
+  color: #555;
+}
+
+.li-item.active {
+  color: #111;
+}
+
+.li-item.active:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #333;
+  left: -5px;
+  right: -5px;
+  bottom: -10px;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  left: calc(50% + 3px);
+  background: #e60023;
+  color: #fff;
+  border-radius: 10px;
+  min-width: 14px;
+  padding: 1px 3px;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+/* BookMyShow-style navbar */
+.bms-top {
+  height: 43px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 0 14%;
+  background: #fff;
+  font-size: 10px;
+}
+
+.bms-logo {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  white-space: nowrap;
+}
+
+.bms-logo span {
+  color: #fff;
+  background: #e83e55;
+  padding: 1px 2px;
+  border-radius: 2px;
+}
+
+.bms-search {
+  flex: 1;
+  min-width: 80px;
+  max-width: 400px;
+  height: 25px;
+  border: 1px solid #eee;
+  color: #999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 9px;
+  font-size: 9px;
+}
+
+.bms-city {
+  margin-left: auto;
+  color: #444;
+  white-space: nowrap;
+}
+
+.signin {
+  background: #f0445d;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.hamburger {
+  font-size: 18px;
+  color: #555;
+}
+
+.bms-bottom {
+  height: 23px;
+  background: #f4f4f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14%;
+  color: #444;
+  font-size: 9px;
+  white-space: nowrap;
+  gap: 18px;
+}
+
+.bms-bottom .muted {
+  color: #777;
+}
+
+/* Wisdom Sprouts-style navbar */
+.wisdom {
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 10px 18px;
+  background-color: #d3e9e7;
+  background-image: repeating-radial-gradient(ellipse at 10% 120%, transparent 0 13px, rgba(255, 255, 255, .35) 14px 15px, transparent 16px 26px);
+}
+
+.wisdom-brand {
+  width: 150px;
+  flex: 0 0 150px;
+  color: #246e6c;
+  line-height: 1.05;
+}
+
+.brand-mark {
+  font-size: 21px;
+  display: inline-block;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.brand-name {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .5px;
+}
+
+.brand-tag {
+  display: block;
+  margin-left: 29px;
+  font-size: 7px;
+  letter-spacing: .3px;
+}
+
+.wisdom-links {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(9px, 1.6vw, 22px);
+}
+
+.wisdom-links a {
+  color: #46595a;
+  text-decoration: none;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.wisdom-links a:first-child {
+  color: #f06c43;
+}
+
+.contact {
+  border: 0;
+  border-radius: 18px;
+  background: #ff642d;
+  color: #fff;
+  padding: 9px 14px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+/* Instagram-style footer */
+.instagram {
+  min-height: 48px;
+  background: #0b1012;
+  color: #b9bfc1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 12px;
+  font-size: 7px;
+}
+
+.ig-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.ig-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  color: #9ca3a5;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 20px 12px;
+  }
+
+  .linkedin {
+    padding: 6px 8px;
+    gap: 8px;
+  }
+
+  .li-links {
+    gap: 8px;
+  }
+
+  .li-item {
+    min-width: 28px;
+    font-size: 8px;
+  }
+
+  .li-icon {
+    font-size: 14px;
+  }
+
+  .bms-top,
+  .bms-bottom {
+    padding-left: 3%;
+    padding-right: 3%;
+    gap: 10px;
+  }
+
+  .wisdom {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .wisdom-brand {
+    flex-basis: 125px;
+    width: 125px;
+  }
+
+  .wisdom-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .wa-action {
+    padding: 6px;
+  }
+
+  .wa-icon {
+    padding: 0 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 16px 8px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .search {
+    width: 100px;
+  }
+
+  .li-links {
+    gap: 5px;
+  }
+
+  .li-item {
+    min-width: 24px;
+    font-size: 7px;
+  }
+
+  .li-item:nth-last-child(2) {
+    display: none;
+  }
+
+  .bms-top {
+    gap: 8px;
+  }
+
+  .bms-logo {
+    font-size: 10px;
+  }
+
+  .bms-bottom {
+    overflow: hidden;
+  }
+
+  .bms-bottom span:nth-child(n+6) {
+    display: none;
+  }
+
+  .wisdom-links a {
+    font-size: 9px;
+  }
+}
